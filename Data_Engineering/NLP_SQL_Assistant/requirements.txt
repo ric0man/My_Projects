@@ -1,0 +1,10 @@
+streamlit
+langchain
+openai
+sqlalchemy 
+langchain==0.2.1
+langchain-community==0.3.29
+# pandas           # For tabular formatting or CSV export
+# python-dotenv    # For secure API key management via .env
+# matplotlib       # For basic charting
+# chromadb         # For semantic search or RAG
