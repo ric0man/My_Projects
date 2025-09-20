@@ -1,21 +1,19 @@
-## 😷 Face Mask Detection — `README.md`
 
-```markdown
-# 😷 Face Mask Detection
+#  Face Mask Detection
 
 Real-time face mask detection using OpenCV and a pre-trained CNN. Designed for quick demos, modular clarity.
-## 🚀 Features
-- 🎥 Real-time webcam feed processing
-- 🧠 CNN-based mask detection
-- 🧱 Modular code with clean separation of concerns
-- 📦 Easy setup and deployment
+## Features
+-  Real-time webcam feed processing
+-  CNN-based mask detection
+-  Modular code with clean separation of concerns
+-  Easy setup and deployment
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - Python
 - OpenCV
 - TensorFlow / Keras
 
-## 📦 Setup
+##  Setup
 
 ```bash
 git clone https://github.com/ric0man/Face_Mask_Detection.git
@@ -39,7 +37,7 @@ Project Structure:
 └── README.md
 
 
-📌 Notes
+ Notes
 - Designed for quick demos.
 - Easily extendable to mobile or edge deployment
 - Model can be retrained with custom dataset

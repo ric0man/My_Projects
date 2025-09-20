@@ -1,22 +1,22 @@
-# 🧠 NLP-Powered SQL Assistant
+#  NLP-Powered SQL Assistant
 
 A modular assistant that converts natural language queries into executable SQL using LangChain and LLMs. Built with Streamlit and SQLite for lightweight demos and recruiter-friendly visibility.
 
-## 🚀 Features
-- 🔍 NLP-to-SQL conversion using LangChain
-- 🧠 LLM orchestration with fallback logic
-- 🧱 Modular codebase with reproducible setup
-- 🧰 Streamlit UI for interactive querying
-- 🗃️ SQLite backend for simplicity and portability
+##  Features
+-  NLP-to-SQL conversion using LangChain
+-  LLM orchestration with fallback logic
+-  Modular codebase with reproducible setup
+-  Streamlit UI for interactive querying
+-  SQLite backend for simplicity and portability
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - Python
 - LangChain
 - OpenAI API
 - Streamlit
 - SQLite
 
-## 📦 Setup
+##  Setup
 
 ```bash
 git clone https://github.com/ric0man/NLP_SQL_Assistant.git
@@ -42,7 +42,7 @@ Project Structure
 └── README.md
 
 
-📌 Notes
+ Notes
 - Modularized for easy onboarding and demo sharing
 - API fallback logic ensures robustness across providers
 - SQLite used for simplicity; can be swapped with Snowflake or Delta Lake
