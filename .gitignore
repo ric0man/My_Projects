@@ -11,3 +11,5 @@ AiML/NLP_SQL_Assistant/.env.txt
 # Python cache
 __pycache__/
 *.pyc
+
+AiML/Face_Mask_Identifier/.venv/
