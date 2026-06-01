@@ -1,0 +1,13 @@
+# Python virtual environments
+venv/
+.env/
+.env*/
+venv/
+**/venv/
+.env
+.env.*
+AiML/NLP_SQL_Assistant/.env.txt
+
+# Python cache
+__pycache__/
+*.pyc

@@ -1,10 +1,9 @@
-streamlit
-langchain
-openai
-sqlalchemy 
-langchain==0.2.1
-langchain-community==0.3.29
-# pandas           # For tabular formatting or CSV export
-# python-dotenv    # For secure API key management via .env
-# matplotlib       # For basic charting
-# chromadb         # For semantic search or RAG
+streamlit>=1.30.0
+langchain>=0.1.16,<0.2.0
+langchain-community>=0.0.32,<0.1.0
+openai>=1.0.0
+sqlalchemy>=2.0.0
+pandas>=2.0.0         # For tabular formatting or CSV export
+python-dotenv>=1.0.0  # For secure API key management via .env
+matplotlib>=3.8.0     # For basic charting
+chromadb>=0.4.22      # For semantic search or RAG

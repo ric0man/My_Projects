@@ -1,51 +1,35 @@
 import os
 from dotenv import load_dotenv
 
-# 🔄 Load environment variables from .env or fallback to .env.template
-# ⚠️ IMPORTANT: Ensure .env is saved as UTF-8 (no BOM), especially if edited in Notepad.
-#               Incorrect encoding (e.g., UTF-16 or ANSI) will cause UnicodeDecodeError.
+# ---------- Paths ----------
+# Project root: C:\Users\rohan\Desktop\Job\Projects\AiML\NLP_SQL_Assistant
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+DB_FILE = os.path.join(DATA_DIR, "sample.db")  # ...\NLP_SQL_Assistant\data\sample.db
 
-if os.path.exists(".env"):
-    load_dotenv(".env", encoding="utf-8")
-elif os.path.exists(".env.template"):
-    load_dotenv(".env.template", encoding="utf-8")
+# ---------- Env loading ----------
+# Load environment variables from .env.txt or fallback to .env.template
+env_path_txt = os.path.join(BASE_DIR, ".env.txt")
+env_path_template = os.path.join(BASE_DIR, ".env.template")
 
-# 🔐 OpenAI API Key Setup
-# This assistant supports two options:
-#
-# Option 1: Personal key via `.env` file
-#           OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-#
-# Option 2: Shared service key via `.env.template` (for demos or onboarding)
-#           OPENAI_API_KEY=sk-svcacct-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+if os.path.exists(env_path_txt):
+    load_dotenv(env_path_txt, encoding="utf-8")
+elif os.path.exists(env_path_template):
+    load_dotenv(env_path_template, encoding="utf-8")
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") or "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"
+# ---------- API keys ----------
+PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY")
 
+GROQ_API_KEY        = os.getenv("GROQ_API_KEY")
+GEMINI_API_KEY      = os.getenv("GEMINI_API_KEY")
+CLAUDE_API_KEY      = os.getenv("CLAUDE_API_KEY")
+HUGGINGFACE_API_KEY = os.getenv("HF_API_KEY")
 
-# ✅ Validate key format (temporarily disabled due to service key format)
-# valid_prefixes = ("sk-", "sk-svcacct-", "Open")
-# if not OPENAI_API_KEY or not OPENAI_API_KEY.startswith(valid_prefixes):
-#     raise ValueError(
-#         "❌ OPENAI_API_KEY is missing or invalid.\n"
-#         "Please set it in your .env file or use the provided .env.template.\n"
-#         "Supported formats include keys starting with 'sk-', 'sk-svcacct-', or 'Open'."
-#     )
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "perplexity")
 
-# 🧠 SQLite DB URI used by LangChain SQL agent
-DB_URI = "sqlite:///data/sample.db"
+# ---------- Database ----------
+# 1) Raw filesystem path for sqlite3.connect()
+DB_PATH = DB_FILE
 
-# 🧩 Future Expansion: Multi-LLM Support
-# -------------------------------------
-# To support other LLMs, add their keys and endpoints here.
-# Then update `agent_builder.py` to switch dynamically.
-#
-# Examples:
-# GROQ_API_KEY       = os.getenv("GROQ_API_KEY")
-# GEMINI_API_KEY     = os.getenv("GEMINI_API_KEY")
-# CLAUDE_API_KEY     = os.getenv("CLAUDE_API_KEY")
-# HUGGINGFACE_API_KEY= os.getenv("HF_API_KEY")
-#
-# You can also define a selector:
-# LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai")
-#
-# Then use conditional logic in your agent builder to route accordingly.
+# 2) SQLAlchemy-style URI for LangChain SQLDatabase.from_uri()
+DB_URI = f"sqlite:///{DB_FILE.replace(os.sep, '/')}"
