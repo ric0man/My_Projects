@@ -1,0 +1,5 @@
+company_id,name,country,market_cap_usd,pe,pb,rd_spend_usd,fiscal_year,therapeutic_area_share,fda_inspection_status
+CO001,Sun Pharma,India,18000000000,28.5,3.2,450000000,2023,0.18,Satisfactory
+CO002,Dr Reddys,India,11000000000,22.1,4.1,380000000,2023,0.15,Satisfactory
+CO003,Cipla,India,9500000000,25.3,3.8,310000000,2023,0.12,Warning Letter
+CO004,Teva,Israel,16000000000,15.2,1.9,820000000,2023,0.22,Satisfactory

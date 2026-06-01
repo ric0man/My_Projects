@@ -1,0 +1,13 @@
+filing_id,molecule_id,company_id,filing_date,para_cert_type,status,active_litigation,form483_count,api_suppliers,regulatory_hold
+ANDA001,MOL001,CO001,2022-03-15,IV,Approved,False,0,3,False
+ANDA002,MOL002,CO002,2021-11-01,IV,Tentatively Approved,True,1,2,False
+ANDA003,MOL001,CO003,2022-03-15,IV,Pending,False,0,2,False
+ANDA004,MOL003,CO001,2023-06-10,III,Approved,False,0,4,False
+ANDA005,MOL004,CO004,2023-09-20,IV,Pending,True,2,1,True
+ANDA006,MOL005,CO002,2023-01-05,IV,Approved,False,0,3,False
+ANDA007,MOL006,CO003,2022-08-22,IV,Tentatively Approved,True,0,2,False
+ANDA008,MOL007,CO001,2024-02-10,IV,Pending,False,1,2,False
+ANDA009,MOL005,CO004,2023-01-05,IV,Approved,False,0,3,False
+ANDA010,MOL008,CO002,2024-05-01,IV,Pending,False,0,2,False
+ANDA011,MOL002,CO001,2021-11-01,IV,Pending,True,0,2,False
+ANDA012,MOL006,CO004,2022-08-22,IV,Pending,False,0,1,False
